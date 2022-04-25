@@ -1,10 +1,12 @@
 {
   "name": "@anupamdalmia10/commitreleasedemo",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "package to demo and test various aspects of package publishing",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "standard-version --sign",
+    "dry-release": "npm run release -- --dry-run"
   },
   "repository": {
     "type": "git",
