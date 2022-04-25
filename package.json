@@ -1,0 +1,22 @@
+{
+  "name": "@anupamdalmia10/commitreleasedemo",
+  "version": "0.0.1",
+  "description": "package to demo and test various aspects of package publishing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anupamdalmia10/commitReleaseDemo.git"
+  },
+  "author": "Anupam Dalmia",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/anupamdalmia10/commitReleaseDemo/issues"
+  },
+  "homepage": "https://github.com/anupamdalmia10/commitReleaseDemo#readme",
+  "dependencies": {
+    "standard-version": "^9.3.2"
+  }
+}
