@@ -34,7 +34,8 @@ jobs:
       # Install Dependencies
       - name: Install dependencies
         run: npm install
-
+      - name: Get Commit Message
+        run: echo ${{ github.event.head_commit.message }}
       - name: Dry Release
         run: npm run dry-release
         
