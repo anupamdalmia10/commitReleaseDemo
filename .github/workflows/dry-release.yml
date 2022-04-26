@@ -36,7 +36,9 @@ jobs:
         run: npm install
 
       - name: Get Commit Message
-        run: echo The commit message is ${{ github.event.head_commit.message }}
+        env:
+            message: ${{ github.event.head_commit.message }}
+        run: echo The commit message is ${{env.message}}
         shell: bash
       - name: Dry Release
         run: npm run dry-release
