@@ -37,8 +37,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Get Commit Message
-        run: echo The commit message is ${{env.commitmsg}}
+      - name: Write Commit Message to a file
+        run: |
+          git log -1 --pretty=format:"%s" >> commit.txt
+          cat ./commit.txt
         shell: bash
       - name: Dry Release
         run: npm run dry-release
