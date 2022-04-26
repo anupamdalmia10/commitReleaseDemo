@@ -13,6 +13,8 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
+    env:
+      commitmsg: ${{ github.event.head_commit.message }}
     runs-on: ubuntu-latest
     
     strategy:
@@ -36,9 +38,7 @@ jobs:
         run: npm install
 
       - name: Get Commit Message
-        env:
-            message: ${{ github.event.head_commit.message }}
-        run: echo The commit message is ${{env.message}}
+        run: echo The commit message is ${{env.commitmsg}}
         shell: bash
       - name: Dry Release
         run: npm run dry-release
